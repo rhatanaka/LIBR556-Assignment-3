@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <!-- This page is copyright Elated Communications Ltd. (www.elated.com) -->
+
+    <title>Suika Japanese Cuisine</title>
+
+    <style type="text/css">
+      body { 
+          font-family: Helvetica,sans-serif;
+          margin: 50px 50px 50px;
+            background: #387c3d; 
+        }
+      ul#tabs { list-style-type: none; margin: 30px 0 0 0; padding: 0 0 0.3em 0; }
+      ul#tabs li { display: inline; }
+      ul#tabs li a { color: #42454a; background-color: #dedbde; border: 1px solid #c9c3ba; border-bottom: none; padding: 0.3em; text-decoration: none; }
+      ul#tabs li a:hover { background-color: #f1f0ee; }
+      ul#tabs li a.selected { color: #000; background-color: #f1f0ee; font-weight: bold; padding: 0.7em 0.3em 0.38em 0.3em; }
+      div.tabContent { border: 1px solid #c9c3ba; padding: 0.5em; background-color: #f1f0ee; }
+      div.tabContent.hide { display: none; }
+    /*Slide-like background images*/ 
+        .slide-img{
+    position: absolute;
+    width: 1160px;
+    height: 800px;
+    top: 0;
+    right: 0;
+    background: url(large1.jpg);
+    background-repeat: no-repeat;
+    opacity: 1;
+    animation: fateimg 18s linear infinite;
+    }
+        /*Animation code*/
+ @keyframes fateimg{
+    0%{background: url(large1.jpg);opacity: 1;background-repeat: no-repeat;}
+    33%{background: url(large1.jpg);opacity: 1;background-repeat: no-repeat;}
+    34%{background: url(large1.jpg);opacity: 0;background-repeat: no-repeat;}
+    35%{background: url(large2.jpg);opacity: 1;background-repeat: no-repeat;}
+    65%{background: url(large2.jpg);opacity: 1;background-repeat: no-repeat;}
+    66%{background: url(large2.jpg);opacity: 0;background-repeat: no-repeat;}
+    67%{background: url(large3.jpg);opacity: 1;background-repeat: no-repeat;}
+    97%{background: url(large3.jpg);opacity: 1;background-repeat: no-repeat;}
+    98%{background: url(large3.jpg);opacity: 0;background-repeat: no-repeat;}
+    100%{background: url(large1.jpg);opacity: 1;background-repeat: no-repeat;}
+}/*Use opacity:1 & opacity:0 to imitate fading in & fading out*/
+    </style>
+
+    <script type="text/javascript">
+    //<![CDATA[
+
+    var tabLinks = new Array();
+    var contentDivs = new Array();
+
+    function init() {
+
+      // Grab the tab links and content divs from the page
+      var tabListItems = document.getElementById('tabs').childNodes;
+      for ( var i = 0; i < tabListItems.length; i++ ) {
+        if ( tabListItems[i].nodeName == "LI" ) {
+          var tabLink = getFirstChildWithTagName( tabListItems[i], 'A' );
+          var id = getHash( tabLink.getAttribute('href') );
+          tabLinks[id] = tabLink;
+          contentDivs[id] = document.getElementById( id );
+        }
+      }
+
+      // Assign onclick events to the tab links, and
+      // highlight the first tab
+      var i = 0;
+
+      for ( var id in tabLinks ) {
+        tabLinks[id].onclick = showTab;
+        tabLinks[id].onfocus = function() { this.blur() };
+        if ( i == 0 ) tabLinks[id].className = 'selected';
+        i++;
+      }
+
+      // Hide all content divs except the first
+      var i = 0;
+
+      for ( var id in contentDivs ) {
+        if ( i != 0 ) contentDivs[id].className = 'tabContent hide';
+        i++;
+      }
+    }
+
+    function showTab() {
+      var selectedId = getHash( this.getAttribute('href') );
+
+      // Highlight the selected tab, and dim all others.
+      // Also show the selected content div, and hide all others.
+      for ( var id in contentDivs ) {
+        if ( id == selectedId ) {
+          tabLinks[id].className = 'selected';
+          contentDivs[id].className = 'tabContent';
+        } else {
+          tabLinks[id].className = '';
+          contentDivs[id].className = 'tabContent hide';
+        }
+      }
+
+      // Stop the browser following the link
+      return false;
+    }
+
+    function getFirstChildWithTagName( element, tagName ) {
+      for ( var i = 0; i < element.childNodes.length; i++ ) {
+        if ( element.childNodes[i].nodeName == tagName ) return element.childNodes[i];
+      }
+    }
+
+    function getHash( url ) {
+      var hashPos = url.lastIndexOf ( '#' );
+      return url.substring( hashPos + 1 );
+    }
+
+    //]]>
+    </script>
+  </head>
+  <body onload="init()">
+    <!--Create a div where background images change like slides-->
+<div class="slide-img"></div>
+      <h1>~ MENU ~</h1>
+    
+    <ul id="tabs">
+      <li><a href="#lunch">Lunch</a></li>
+      <li><a href="#dinner">Dinner</a></li>
+      <li><a href="#drink">Drink</a></li>
+    </ul>
+
+    <div class="tabContent" id="lunch">
+      <h2>Lunch</h2>
+        <h3>For a Meal</h3>
+      <div class="menu-items"><!--To make two columns for the menu items-->
+          <h2 class="subtitle">Rice</h2>
+          <p class="food-name">Beef filet jade fried rice – $15.20</p>
+          <p class="food-description">Cubed beef, garlic, and spinach fried rice.</p>
+          <p class="food-name">Foie gras rice bowl – $18.80</p>
+          <p class="food-description">Foie gras steak and mixed mushrooms seasoned with balsamic vinegar reduction and sansho pepper sweet and sour sauce on a bowl of steamed rice.</p>
+        </div>
+    
+        <div class="menu-items">
+            <h2 class="subtitle">Noodle</h2>
+            <p class="food-name">Tokyo oxtail ramen – $12.80</p>
+            <p class="food-description">Oxtail and noodles in soy broth
+topped with dried fish powder.</p>
+            <p class="food-name">Shirasu yaki udon – $12.80</p>
+            <p class="food-description">Pan fried udon noodle with yuzu pepper sauce. crispy shirasu (baby sardines)and seaweed on top.
+            </p>
+        </div>
+    </div>
+
+    <div class="tabContent" id="dinner">
+      <h2>Dinner</h2>
+        <h3>For Date/Gathering</h3>
+      <div class="menu-items">
+          <h2 class="subtitle">Fish</h2>
+          <p class="food-name">Grilled sable fish – $15.8</p>
+          <p class="food-description">Grilled, miso-marinated sable fish.</p>
+          <p class="food-name">Sashimi five kinds – $30.00</p>
+          <p class="food-description">Raw fish slices. Chef’s choice.</p>
+        </div>
+
+        <div class="menu-items">
+            <h2 class="subtitle">Meat</h2>
+            <p class="food-name">Filet steak – $23.80</p>
+            <p class="food-description">Beef filet steak served on a sizzling hot stone plate with
+soy-onion sauce and wasabi sauce on the side.</p>
+            <p class="food-name">Beef short rib – $24.00</p>
+            <p class="food-description">fried short rib cooked in sweet balsamic sauce. Our signature
+sweet and sour beef!</p>
+        </div>
+    
+        <div class="menu-items">
+            <h2 class="subtitle">Vegetables</h2> 
+            <p class="food-name">Tofu salad – $9.80</p> 
+            <p class="food-description">Cold tofu, fresh and fried bean curd on organic greens with citrus soy dressing.</p>
+            <p class="food-name">tomato kimchi salad – $11.20</p>
+            <p class="food-description">Tomatoes marinated in kimchi sauce on a mix of greens and cilantro. Finished with drizzled with kimchi-spiced dressing.</p>
+        </div>
+
+        <div class="menu-items">
+            <h2 class="subtitle">Sushi</h2> 
+            <p class="food-name">Aburi toro avocado – $13.80</p>
+            <p class="food-description">Seared pressed fatty tuna sushi with avocado, shiso, sesame seeds topped with homemade soy dressing and seaweed sauce.</p>
+            <p class="food-name">Pressed sushi aburi cheese unagi – $16.80</p>
+            <p class="food-description">Seared eel pressed sushi. Served with gorgonzola sauce and unagi sauce.
+            </p>   
+        </div>
+    </div>
+
+    <div class="tabContent" id="drink">
+      <h2>Drinks</h2>
+        <3>For a Drink</3>
+      <div class="menu-items">
+          <h2 class="subtitle">Drinks</h2> 
+    
+          <p class="food-name">Beer</p>
+
+          <ul class="food-description">
+              <li>Kokanee - $6.5/341 ml</li>
+              <li>Asahi - $6.5 /330 ml</li>
+              <li>Asahi Black - $8/334 ml</li>
+              <li>Orion Beer - $14/633 ml</li>
+          </ul>
+    
+          <p class="food-name">Wine</p>
+          <ul class="food-description">
+              <li>Shoot in the Dark - $9/Glass</li>
+              <li>Kettle Valley - $10/Glass</li>
+              <li>Pentage - $10/Glass</li>
+          </ul>
+     
+          <p class="food-name">Japanese Vodka</p>
+          <ul class="food-description">
+              <li>Moon Light - $6.5/Glass</li>
+              <li>Iichiko Napoleon - $8.5/Glass</li>
+              <li>Dan Dan - $10/Glass</li>
+          </ul>
+        </div>
+    
+        <div class="menu-items">
+            <h2 class="subtitle">Tapas</h2> 
+            <p class="food-name">Edamame – $3.80</p>
+            <p class="food-description">Lightly salted steamed soy beans.</p>
+            <p class="food-name">Tako wasabi – $3.80</p>
+            <p class="food-description">Chopped raw octopus and pickled wasabi stems marinated in wasabi flavoured sauce.</p>
+            <p class="food-name">Chicken kara-age – $9.80</p>
+            <p class="food-description">Deep fried chicken served with Japanese salt and pepper.</p>
+            <p class="food-name">Truffled “broccauli” tempura – $11.00</p> 
+            <p class="food-description">Deep fried broccoli and cauliflower tossed with truffle salt. Served with garlic truffle sauce on the side.</p>
+            <p class="food-name">Deluxe “suika box” – $14.80</p> 
+            <p class="food-description">Assortment of nine samplers. For when you want a little bit of everything.</p>
+        </div>
+    </div>
+
+  </body>
+</html>

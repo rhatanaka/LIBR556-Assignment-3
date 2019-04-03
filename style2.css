@@ -1,0 +1,127 @@
+body {
+    font-family: Helvetica,sans-serif;
+    margin: 50px 50px 50px;
+    background: #C6BC97
+}
+#container {
+    margin: 0px;
+	padding: 0px;
+    position: absolute;
+    top:0; left: 0;right: 0
+}
+/*Slide-like background images*/ 
+.slide-img{
+    position: absolute;
+    width: 1160px;
+    height: 800px;
+    top: 0;
+    right: 0;
+    background: url(large1.jpg);
+    background-repeat: no-repeat;
+    opacity: 1;
+    animation: fateimg 18s linear infinite;
+    }
+/*Animation code*/
+ @keyframes fateimg{
+    0%{background: url(large1.jpg);opacity: 1;background-repeat: no-repeat;}
+    33%{background: url(large1.jpg);opacity: 1;background-repeat: no-repeat;}
+    34%{background: url(large1.jpg);opacity: 0;background-repeat: no-repeat;}
+    35%{background: url(large2.jpg);opacity: 1;background-repeat: no-repeat;}
+    65%{background: url(large2.jpg);opacity: 1;background-repeat: no-repeat;}
+    66%{background: url(large2.jpg);opacity: 0;background-repeat: no-repeat;}
+    67%{background: url(large3.jpg);opacity: 1;background-repeat: no-repeat;}
+    97%{background: url(large3.jpg);opacity: 1;background-repeat: no-repeat;}
+    98%{background: url(large3.jpg);opacity: 0;background-repeat: no-repeat;}
+    100%{background: url(large1.jpg);opacity: 1;background-repeat: no-repeat;}
+}/*Use opacity:1 & opacity:0 to imitate fading in & fading out*/
+
+/*Set the side navigation bar*/
+#sidebar {
+    position:fixed;
+    padding: 0;
+    margin: 0;
+    left: 0;top: 0;
+    width: 265px;
+    height: 100%;
+    background: #387c3d
+}
+h1 {
+    font-family:fantasy;
+    font-size: 30px; 
+    text-align: center;
+    font-weight:bolder
+}
+a {
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.15em;
+    font-weight:lighter;
+    color: white;
+    text-decoration: none;
+}
+.btn {
+    background: #387c3d;
+    padding: 16px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width:265px;
+    letter-spacing: 0.15em;
+    font-weight:100;
+    text-align: left;
+}
+.btn:hover {background-color:#4CAF50}/* Change background color of links on hover */
+#sidebar p {
+    color:darkgrey;
+    font-weight: lighter;
+    letter-spacing: 0.15em;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px
+    
+}
+
+/*Food menu content*/
+#menu-container {
+    position: absolute;
+    right: 0;
+    top: 800px;
+    left: 265px;/*To keep the position of menu-container, so that content inside it won't move when the screen size changes*/
+    width: 1100px
+}
+.headline {
+    font-family:fantasy;
+    font-size: 20px; 
+    position: relative;
+    text-align:center;
+}
+
+.food-name {
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    font-size: 20px
+}
+.food-description {
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    line-height: 1.5em
+}
+.menu-items {
+    display:inline-block;/*To make two columns for the menu items*/
+    position: relative;
+    width: 500px;
+    padding-left: 25px;
+    vertical-align: text-top
+}
+.subtitle {
+    text-align: left;
+    font-weight: 200;
+}
+ul{/*To set all lists on the page in one declaration*/
+    padding: 0px;
+    margin: 0px;/*set padding and margin as zero to avoid indentation of a list, so that the list of pictures can be aligned with the buttons*/
+    list-style: none;/*To remove the bullets*/
+}
