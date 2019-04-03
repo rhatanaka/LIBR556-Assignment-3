@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <!-- This page is copyright Elated Communications Ltd. (www.elated.com) -->
-
+    <meta charset="utf-8" />
     <title>Suika Japanese Cuisine</title>
 
     <style type="text/css">
@@ -118,12 +118,15 @@
     //]]>
     </script>
   </head>
+        
   <body onload="init()">
     <!--Create a div where background images change like slides-->
-<div class="slide-img"></div>
+        <div class="slide-img"></div>
+    
+   <!--The food menu-->
       <h1>~ MENU ~</h1>
     
-    <ul id="tabs">
+    <ul id="tabs"> 
       <li><a href="#lunch">Lunch</a></li>
       <li><a href="#dinner">Dinner</a></li>
       <li><a href="#drink">Drink</a></li>
@@ -134,20 +137,50 @@
         <h3>For a Meal</h3>
       <div class="menu-items"><!--To make two columns for the menu items-->
           <h2 class="subtitle">Rice</h2>
-          <p class="food-name">Beef filet jade fried rice – $15.20</p>
-          <p class="food-description">Cubed beef, garlic, and spinach fried rice.</p>
-          <p class="food-name">Foie gras rice bowl – $18.80</p>
-          <p class="food-description">Foie gras steak and mixed mushrooms seasoned with balsamic vinegar reduction and sansho pepper sweet and sour sauce on a bowl of steamed rice.</p>
+                <p class="food-name">Ebi-chili bowl set – $10.80</p>
+                <p class="food-description">Szechwan style chili prawns, tartar sauce, homemade chili oil and scrambled egg on the rice.</p>
+                <p class="food-name">Beef filet jade fried rice – $15.20</p>
+                <p class="food-description">Cubed beef, garlic, and spinach fried rice.</p>
+                <p class="food-name">Gourmet seafood chirashi bowl set- $17.80</p>
+                <p class="food-description">chef’s choice 5 kinds of fresh sashimi on top of premium sushi rice w/ negitoro,salmon caviar, homemade stewed tsukudani, freshly grated mountain yam and okra.</p>
+                <p class="food-name">Foie gras rice bowl – $18.80</p>
+                <p class="food-description">Foie gras steak and mixed mushrooms seasoned with balsamic vinegar reduction and sansho pepper sweet and sour sauce on a bowl of steamed rice.</p>
         </div>
     
         <div class="menu-items">
             <h2 class="subtitle">Noodle</h2>
-            <p class="food-name">Tokyo oxtail ramen – $12.80</p>
-            <p class="food-description">Oxtail and noodles in soy broth
+                <p class="food-name">Miso-ramen – $11.80</p>
+                <p class="food-description">Slowly braised ox-tail in miso broth which is made from
+ox-tail,pork and chicken. Topped w/ dried fish powder and scallions.</p>
+                <p class="food-name">Tokyo oxtail ramen – $12.80</p>
+                <p class="food-description">Oxtail and noodles in soy broth
 topped with dried fish powder.</p>
-            <p class="food-name">Shirasu yaki udon – $12.80</p>
-            <p class="food-description">Pan fried udon noodle with yuzu pepper sauce. crispy shirasu (baby sardines)and seaweed on top.
-            </p>
+                <p class="food-name">Shirasu yaki udon – $12.80</p>
+                <p class="food-description">Pan fried udon noodle with yuzu pepper sauce. crispy shirasu (baby sardines)and seaweed on top.</p>
+        </div>
+            
+        <div class="menu-items">
+                <h2 class="subtitle">Set Meal</h2>
+                <p class="food-name">The hamburg steak set – $15</p>
+                <p class="food-description">Homemade juicy hamburg steak on a hot plate. Choice of “soy onion” or “teriyaki” sauce.</p>
+                <p class="food-name">Double tonkatsu set – $16</p>
+                <p class="food-description">2 pieces of fried pork loin cutlet using fresh panko. Served w/ 2kinds of dipping sauce.</p>
+                <p class="food-name">Grilled fish set – $17</p>
+                <p class="food-description">2 kinds of grilled fish. Please ask your server today’s fish.</p>
+                <p class="food-name">AAA beef rib steak set – $18.20</p>
+                <p class="food-description">Served on a hot plate w/ sauteed garlic butter  potato.</p>
+         </div>
+            
+         <div class="menu-items">
+                <h2 class="subtitle">Lunch Side Dish</h2>
+                <p class="food-name">Kyuri-kimchi – $4.20</p>
+                <p class="food-description">Homemade kimchi sauce. Marinated cucumber.</p>
+                <p class="food-name">Renkon kinpira – $4.80</p>
+                <p class="food-description">Stir fried roots w/ fresh spice mix.</p>
+                <p class="food-name">Smoked tuna tataki – $9.80</p>
+                <p class="food-description">With home made chili oil</p>
+                <p class="food-name">My ebimayo – $10.80</p>
+                <p class="food-description">Fried cilantro battered prawns w/ chili mayo.</p>
         </div>
     </div>
 
@@ -155,38 +188,63 @@ topped with dried fish powder.</p>
       <h2>Dinner</h2>
         <h3>For Date/Gathering</h3>
       <div class="menu-items">
-          <h2 class="subtitle">Fish</h2>
-          <p class="food-name">Grilled sable fish – $15.8</p>
-          <p class="food-description">Grilled, miso-marinated sable fish.</p>
-          <p class="food-name">Sashimi five kinds – $30.00</p>
-          <p class="food-description">Raw fish slices. Chef’s choice.</p>
-        </div>
+          <h2 class="subtitle">Sea Food</h2>
+                <p class="food-name">Agedashi ebiten tofu – $7.40</p>
+                <p class="food-description">Deep fried tofu and prawns in a soy broth. Finished with shrimp oil and dried baby shrimp.</p>
+                <p class="food-name">Tako karaage – $9.80</p>
+                <p class="food-description">Octopus slices marinated in plum and shiso. Deep fried with
+whipped egg white batter.</p>
+                <p class="food-name">Aburi hamachi carpaccio – $11.80</p>
+                <p class="food-description">Yellowtail seared with mayonnaise and parmesan. Served with sesame soy dressing.</p>
+                <p class="food-name">Ahi tuna rainbow carpaccio – $14.80</p>
+                <p class="food-description">Thinly sliced ahi tuna and garlic chips on a bed of julienned vegetables. Black sesame dipping sauce on the side.</p>
+                <p class="food-name">Grilled sable fish – $15.8</p>
+                <p class="food-description">Grilled, miso-marinated sable fish.</p>
+                <p class="food-name">Sashimi five kinds – $30.00</p>
+                <p class="food-description">Raw fish slices. Chef’s choice.</p>
+    </div>
 
         <div class="menu-items">
             <h2 class="subtitle">Meat</h2>
-            <p class="food-name">Filet steak – $23.80</p>
-            <p class="food-description">Beef filet steak served on a sizzling hot stone plate with
+                <p class="food-name">Torotoro cha-shu – $7.80</p>
+                <p class="food-description">Pork jowl slowly braised until tender. Served with suika’s secret spice blend sauce. Melts in your mouth!!!</p>
+                <p class="food-name">The hellz chicken – $10.50</p>
+                <p class="food-description">Deep fried chicken tossed in our original hellz sauce.
+(jalapeno, hot sauce, lemon, garlic, vinegar, and tabasco)</p>
+                <p class="food-name">Filet steak – $23.80</p>
+                <p class="food-description">Beef filet steak served on a sizzling hot stone plate with
 soy-onion sauce and wasabi sauce on the side.</p>
-            <p class="food-name">Beef short rib – $24.00</p>
-            <p class="food-description">fried short rib cooked in sweet balsamic sauce. Our signature
+                <p class="food-name">Beef short rib – $24.00</p>
+                <p class="food-description">Fried short rib cooked in sweet balsamic sauce. Our signature
 sweet and sour beef!</p>
+                <p class="food-name">Dynamic steak – $47.00</p>
+                <p class="food-description">2lbs beef rib steak with wasabi, soy and garlic sauce.</p>
         </div>
     
         <div class="menu-items">
-            <h2 class="subtitle">Vegetables</h2> 
+            <h2 class="subtitle">Salads</h2> 
             <p class="food-name">Tofu salad – $9.80</p> 
             <p class="food-description">Cold tofu, fresh and fried bean curd on organic greens with citrus soy dressing.</p>
+            <p class="food-name">Cold ramen salad – $9.80</p>
+            <p class="food-description">Chilled ramen noodles on mixed greens. Topped with sliced egg crepe, chili oil, and minced pork seasoned with black sesame.</p>
             <p class="food-name">tomato kimchi salad – $11.20</p>
             <p class="food-description">Tomatoes marinated in kimchi sauce on a mix of greens and cilantro. Finished with drizzled with kimchi-spiced dressing.</p>
+            <p class="food-name">Sashimi salad – $13.80</p> 
+            <p class="food-description">Today’s fresh sashimi, organic greens, tobiko, shrimp oil with sesame soy dressing.</p>
         </div>
 
         <div class="menu-items">
             <h2 class="subtitle">Sushi</h2> 
-            <p class="food-name">Aburi toro avocado – $13.80</p>
-            <p class="food-description">Seared pressed fatty tuna sushi with avocado, shiso, sesame seeds topped with homemade soy dressing and seaweed sauce.</p>
-            <p class="food-name">Pressed sushi aburi cheese unagi – $16.80</p>
-            <p class="food-description">Seared eel pressed sushi. Served with gorgonzola sauce and unagi sauce.
-            </p>   
+            <p class="food-name">Avocado battera – $6.80</p>
+        <p class="food-description">Pressed avocado sushi with seaweed paste.</p>
+        <p class="food-name">Negitoro battera – $9.80</p>
+        <p class="food-description">Pressed chopped tuna,scallion, avocado,shiso,sesame seeds sushi topped w/sesame soy dressing and seaweed paste.</p>
+        <p class="food-name">Aburi shime saba – $12.80</p>
+        <p class="food-description">Cured mackerel pressed sushi. Seared then served with mustard soy dressing.</p>
+        <p class="food-name">Aburi toro avocado – $13.80</p>
+        <p class="food-description">Seared pressed fatty tuna sushi with avocado, shiso, sesame seeds topped with homemade soy dressing and seaweed sauce.</p>
+        <p class="food-name">Pressed sushi aburi cheese unagi – $16.80</p>
+        <p class="food-description">Seared eel pressed sushi. Served with gorgonzola sauce and unagi sauce.</p>    
         </div>
     </div>
 
